@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | LearnPath</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">LearnPath<span>.</span></h2>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <section class="page-heading">
+            <h1>My Learning Dashboard</h1>
+            <p>Build your skills one lesson at a time.</p>
+        </section>
+
+        <section class="dashboard-summary">
+            <div class="card">
+                <h3>Total Topics</h3>
+                <p class="stat-number" id="total-topics">4</p>
+            </div>
+            <div class="card">
+                <h3>Completed</h3>
+                <p class="stat-number" id="completed-count">0</p>
+            </div>
+            <div class="card">
+                <h3>Overall Progress</h3>
+                <p class="stat-number" id="progress-percent">0%</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>My Learning Plan</h2>
+            <p>Tick a topic after you finish learning it.</p>
+
+            <div class="learning-list">
+                <label class="learning-item">
+                    <input type="checkbox" class="lesson-check" data-id="python">
+                    <span>
+                        <strong>Python Fundamentals</strong>
+                        <small>Variables, conditions and loops</small>
+                    </span>
+                </label>
+
+                <label class="learning-item">
+                    <input type="checkbox" class="lesson-check" data-id="dsa">
+                    <span>
+                        <strong>Data Structures and Algorithms</strong>
+                        <small>Arrays, searching and problem-solving</small>
+                    </span>
+                </label>
+
+                <label class="learning-item">
+                    <input type="checkbox" class="lesson-check" data-id="aptitude">
+                    <span>
+                        <strong>Aptitude Practice</strong>
+                        <small>Percentages, reasoning and number problems</small>
+                    </span>
+                </label>
+
+                <label class="learning-item">
+                    <input type="checkbox" class="lesson-check" data-id="resume">
+                    <span>
+                        <strong>Placement Readiness</strong>
+                        <small>Resume preparation and interview basics</small>
+                    </span>
+                </label>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <p id="progress-message" aria-live="polite">
+                Start learning to track your progress!
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Quick Knowledge Quiz</h2>
+            <p>Test your basic programming knowledge.</p>
+
+            <div class="card quiz-card">
+                <h3 id="question">1. Which keyword is used to define a function in Python?</h3>
+
+                <div id="quiz-options" class="quiz-options">
+                    <button class="quiz-option" data-answer="0">function</button>
+                    <button class="quiz-option" data-answer="1">def</button>
+                    <button class="quiz-option" data-answer="2">define</button>
+                    <button class="quiz-option" data-answer="3">fun</button>
+                </div>
+
+                <p id="quiz-feedback" aria-live="polite"></p>
+                <p id="quiz-score">Score: 0</p>
+                <button type="button" class="btn" id="next-question" hidden>
+                    Next Question
+                </button>
+                <button type="button" class="btn" id="restart-quiz" hidden>
+                    Try Again
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 LearnPath. Created for student learning and career growth.</p>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
